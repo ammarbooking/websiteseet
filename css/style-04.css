@@ -1,0 +1,19 @@
+
+/* Royal Ads V7: faster editorial motion, crisp typography, premium accents */
+.promo-section{padding-block:54px 70px;background:radial-gradient(ellipse at 50% 10%,#e2c49e24,transparent 68%),var(--bg)}
+.promo-slide{isolation:isolate;border-radius:30px;box-shadow:0 18px 55px #26140d30;backface-visibility:hidden}
+.promo-slide.is-active{box-shadow:0 24px 75px #26140d4b;filter:saturate(1.13)}
+.ad-art:after{content:"";position:absolute;inset:7%;border:1px solid #f7dfb64d;border-radius:24px;pointer-events:none}
+.ad-emblem{font-style:italic;text-shadow:0 15px 40px #0007,0 0 55px #ffe3b555}
+.promo-content h3{font-size:clamp(30px,3.2vw,55px);line-height:1.15;letter-spacing:-.025em;text-shadow:0 3px 20px #0005}
+.promo-content p{font-size:clamp(13px,1.25vw,18px);line-height:1.75}
+.promo-content a{border-radius:999px;padding:12px 24px;font-weight:700}
+.promo-slide.is-active:before{animation-duration:.85s}
+.promo-slide.is-active .promo-content>*{transition-duration:.5s;filter:none}
+.promo-slide.is-active .promo-content span{transition-delay:.05s}
+.promo-slide.is-active .promo-content h3{transition-delay:.10s}
+.promo-slide.is-active .promo-content p{transition-delay:.16s}
+.promo-slide.is-active .promo-content a{transition-delay:.22s}
+.promo-dots button.active:after{animation-duration:2.6s}
+@media(max-width:700px){.promo-content h3{font-size:clamp(24px,6vw,36px)}.promo-content p{font-size:12px}.promo-slide{border-radius:22px}}
+@media(prefers-reduced-motion:reduce){.promo-slide,.promo-track,.promo-content>*{transition:none!important;animation:none!important}}

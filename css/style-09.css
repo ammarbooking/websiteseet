@@ -1,0 +1,19 @@
+
+#maisonIntro{position:fixed;inset:0;z-index:2147483647;background:radial-gradient(ellipse at 50% 38%,#513323 0%,#291810 55%,#170d09 100%);display:grid;place-items:center;overflow:hidden;color:#f6e4c8;transition:opacity .65s ease,visibility .65s ease;isolation:isolate}
+#maisonIntro::before{content:"";position:absolute;width:min(85vw,650px);aspect-ratio:1;border:1px solid #d9b77c30;border-radius:50%;box-shadow:0 0 0 40px #e4c18b07,0 0 0 100px #e4c18b05;animation:maisonHalo 3s ease-in-out infinite}
+#maisonIntro::after{content:"";position:absolute;inset:-100%;background:linear-gradient(115deg,transparent 46%,#ffffff0a 50%,transparent 54%);animation:maisonSweep 2.6s ease-in-out 1}
+.maison-intro-content{position:relative;z-index:1;text-align:center;padding:24px;display:flex;flex-direction:column;align-items:center;gap:14px;animation:maisonRise .95s cubic-bezier(.2,.8,.2,1) both}
+.maison-intro-mark{width:112px;height:112px;filter:drop-shadow(0 8px 22px #e0b87755);animation:maisonFloat 2s ease-in-out infinite}
+.maison-intro-name{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,5vw,62px);font-weight:600;letter-spacing:.12em;line-height:1.2;color:#e9c994;direction:ltr;text-shadow:0 3px 22px #e5bc7940}
+.maison-intro-ar{font-family:Tajawal,Arial,sans-serif;font-size:clamp(17px,2.5vw,25px);letter-spacing:.05em;color:#fff2df}
+.maison-intro-tag{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#d4b99b;direction:ltr}
+.maison-intro-track{margin-top:14px;width:min(240px,65vw);height:2px;background:#e8c99b33;border-radius:20px;overflow:hidden}
+.maison-intro-track>span{display:block;height:100%;width:100%;transform-origin:left;animation:maisonProgress 2.45s linear both;background:linear-gradient(90deg,#a97a42,#ffe2a7)}
+.maison-intro-skip{position:absolute;bottom:24px;right:24px;z-index:3;border:1px solid #e3c69b66;background:#ffffff0d;color:#f7e7d0;padding:9px 16px;border-radius:999px;font-size:13px;cursor:pointer}
+#maisonIntro.maison-intro-out{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes maisonRise{from{opacity:0;transform:translateY(25px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes maisonFloat{50%{transform:translateY(-9px) scale(1.04)}}
+@keyframes maisonHalo{50%{transform:scale(1.06);opacity:.55}}
+@keyframes maisonSweep{from{transform:translateX(-45%)}to{transform:translateX(45%)}}
+@keyframes maisonProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){#maisonIntro *,#maisonIntro::before,#maisonIntro::after{animation:none!important}#maisonIntro{transition:none}}
